@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom"
 
 export const Login = ()=> {
@@ -11,7 +12,7 @@ export const Login = ()=> {
     return (
         <div>
             <p>Login</p>
-            <button type="button" onClick={handleClick}>Oi</button>
+            <Button onClick={handleClick} variant="contained" color="primary">Oi</Button>
         </div>
     )
 }
