@@ -1,7 +1,10 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom"
+import { useAppThemeContext } from "../../shared/contexts";
 
 export const Login = ()=> {
+
+    const { toggleTheme } = useAppThemeContext()
 
     const navigate = useNavigate();
 
@@ -12,7 +15,7 @@ export const Login = ()=> {
     return (
         <div>
             <p>Login</p>
-            <Button onClick={handleClick} variant="contained" color="primary">Oi</Button>
+            <Button onClick={toggleTheme} variant="contained" color="primary">Oi</Button>
         </div>
     )
 }
