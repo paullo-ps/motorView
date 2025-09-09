@@ -1,15 +1,13 @@
-import { BrowserRouter, Route, Routes as Switch, Navigate } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import { Dashboard, Login } from "../pages"
 
-export const Routes = ()=> {
+export const AppRoutes = ()=> {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/login" element={<Login />}/>
-                <Route path="/dashboard" element={<Dashboard />} />
+        <Routes>
+            <Route path="/login" element={ <Login /> }/>
+            <Route path="/dashboard" element={ <Dashboard /> }/>
 
-                <Route path="*" element={<Navigate to="/login" />} />
-            </Switch>
-        </BrowserRouter>
+            <Route path='*' element={ <Navigate to="/login" /> }/>
+        </Routes>
     )
 }
